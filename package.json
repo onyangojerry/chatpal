@@ -1,0 +1,33 @@
+{
+    "name": "chatpal",
+    "version": "1.0.0",
+    "description": "Private messaging app with real-time features",
+    "main": "server/server.js",
+    "scripts": {
+        "start": "node server/server.js",
+        "server": "nodemon server/server.js",
+        "client": "npm start --prefix client",
+        "dev": "concurrently \"npm run server\" \"npm run client\"",
+        "install-all": "npm install && npm install --prefix client",
+        "build": "npm run build --prefix client",
+        "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm install --prefix client && npm run build --prefix client"
+    },
+    "dependencies": {
+        "bcryptjs": "^2.4.3",
+        "cors": "^2.8.5",
+        "dotenv": "^16.0.3",
+        "express": "^4.18.2",
+        "express-validator": "^7.0.1",
+        "jsonwebtoken": "^9.0.0",
+        "mongoose": "^7.0.3",
+        "react-scripts": "^5.0.1",
+        "socket.io": "^4.6.1"
+    },
+    "devDependencies": {
+        "concurrently": "^8.0.1",
+        "nodemon": "^3.1.9"
+    },
+    "engines": {
+        "node": ">=16.0.0"
+    }
+}

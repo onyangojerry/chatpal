@@ -1,0 +1,22 @@
+/* TableButton.css - Table button component styles */
+
+.table-tool-button {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    padding: 8px 12px;
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 0.9rem;
+  }
+  
+  .table-tool-button:hover {
+    background-color: var(--secondary-color);
+  }
+  
+  .table-tool-button i {
+    font-size: 1.1rem;
+  }

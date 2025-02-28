@@ -1,0 +1,104 @@
+/* DrawingBoard.css - Drawing component styles */
+
+.drawing-board-container {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  .toolbar {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 20px;
+    padding: 10px;
+    background-color: var(--light-gray);
+    border-radius: 8px;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+  
+  .color-picker input {
+    width: 40px;
+    height: 40px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .line-width {
+    display: flex;
+    align-items: center;
+  }
+  
+  .line-width input {
+    width: 100px;
+  }
+  
+  .toolbar button {
+    padding: 8px 15px;
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .toolbar button:hover {
+    background-color: var(--secondary-color);
+  }
+  
+  .canvas-container {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    background-color: white;
+    border: 1px solid var(--medium-gray);
+    border-radius: 8px;
+    overflow: hidden;
+    margin-bottom: 20px;
+  }
+  
+  .canvas-container canvas {
+    border: 1px solid var(--medium-gray);
+    background-color: white;
+    cursor: crosshair;
+  }
+  
+  .participants {
+    padding: 15px;
+    background-color: var(--light-gray);
+    border-radius: 8px;
+  }
+  
+  .participants h3 {
+    margin-top: 0;
+    font-size: 1rem;
+    margin-bottom: 10px;
+  }
+  
+  .participants ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .participants li {
+    padding: 5px 0;
+    font-size: 0.9rem;
+  }
+  
+  /* Responsive styles */
+  @media (max-width: 768px) {
+    .canvas-container canvas {
+      max-width: 100%;
+      height: auto;
+    }
+    
+    .toolbar {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  }

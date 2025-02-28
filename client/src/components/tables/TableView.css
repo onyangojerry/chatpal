@@ -1,0 +1,116 @@
+/* TableView.css - Table component styles */
+
+.table-view-container {
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  .table-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    flex-wrap: wrap;
+    gap: 15px;
+  }
+  
+  .table-header h2 {
+    margin: 0;
+    font-size: 1.8rem;
+    color: var(--primary-color);
+  }
+  
+  .table-actions {
+    display: flex;
+    gap: 10px;
+  }
+  
+  .table-actions button {
+    padding: 8px 15px;
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .table-actions button:hover {
+    background-color: var(--secondary-color);
+  }
+  
+  .active-users {
+    margin-bottom: 15px;
+    font-size: 0.9rem;
+    background-color: var(--light-gray);
+    padding: 10px;
+    border-radius: 5px;
+  }
+  
+  .active-users .user-badge {
+    background-color: var(--primary-color);
+    color: white;
+    padding: 3px 8px;
+    border-radius: 10px;
+    margin-left: 5px;
+    font-size: 0.8rem;
+  }
+  
+  .table-container {
+    overflow-x: auto;
+    margin-bottom: 20px;
+    background-color: white;
+    border-radius: 5px;
+    box-shadow: var(--shadow);
+  }
+  
+  .table-container table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  .table-container th,
+  .table-container td {
+    border: 1px solid var(--medium-gray);
+    padding: 10px;
+    text-align: left;
+  }
+  
+  .table-container th {
+    background-color: var(--light-gray);
+    font-weight: bold;
+  }
+  
+  .table-container tr:nth-child(even) {
+    background-color: var(--light-gray);
+  }
+  
+  .table-container td.editing {
+    padding: 0;
+  }
+  
+  .table-container td input {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    outline: none;
+    box-sizing: border-box;
+    background-color: rgba(74, 111, 165, 0.1);
+  }
+  
+  /* Responsive styles */
+  @media (max-width: 768px) {
+    .table-header {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+    
+    .table-container {
+      font-size: 0.9rem;
+    }
+    
+    .table-container th,
+    .table-container td {
+      padding: 8px;
+    }
+  }
