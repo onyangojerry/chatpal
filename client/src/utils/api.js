@@ -1,5 +1,5 @@
+// src/utils/api.js
 import axios from 'axios';
-import setAuthToken from './setAuthToken';
 
 // Create an instance of axios
 const api = axios.create({
@@ -27,7 +27,7 @@ api.interceptors.request.use(
 api.interceptors.response.use(
   response => response,
   error => {
-    if (error.response.status === 401) {
+    if (error.response && error.response.status === 401) {
       // Handle unauthorized errors (e.g., redirect to login)
       localStorage.removeItem('token');
     }
